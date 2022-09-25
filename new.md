@@ -1,4 +1,4 @@
-#*Fun Facts about Me*
+# *Fun Facts about Me*
 ## By Audrey Liang
 * This is me!
 >![Image](./testAudrey.jpg)
