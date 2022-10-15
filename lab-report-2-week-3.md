@@ -110,12 +110,12 @@ This was because the code was setting `arr[i]` to the values in `newArr`, instea
 2. List Testing
 The failure inducing input was `{"sad", "cry", "food"}`. The symptom was that there was an assertion error for the test. 
 
-![fail input]()
+![fail input](https://media.discordapp.net/attachments/1023749314587140137/1030663762665025627/unknown.png)
 
 To fix the bug, I added the result to the back of `result` instead of at the beginning. 
 
-![code fix]()
+![code fix](https://cdn.discordapp.com/attachments/1023749314587140137/1030663860451020820/unknown.png)
 
-This was because the result was always added to the front of the array instead of the back, so it would never come back sorted. 
+This was because the result was always added to the front of the array instead of the back, so it would always come back reversed instead of sorted like the function was supposed to do. 
 
 
