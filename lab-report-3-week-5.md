@@ -1,6 +1,6 @@
 # Lab Report 3
 
-1. Using `-i` to search for a word within a file or files disregarding casing.
+## 1. Using `-i` to search for a word within a file or files disregarding casing.
 
 <span style="color:maroon">Example 1.</span>
 
@@ -80,7 +80,7 @@ $ grep -i "There"  technical/911report/chapter-9.txt
               catastrophic effect has been the subject of controversy. We believe that there are
 ```
 
-2. Using `-c` to count the number of times a word shows up within a file or files.
+## 2. Using `-c` to count the number of times a word shows up within a file or files.
 
 <span style="color:maroon">Example 1.</span>
 
@@ -379,7 +379,7 @@ technical/911report/chapter-9.txt:19
 technical/911report/preface.txt:0
 ```
 
-3. Using `-m #` to search through only a certain number of files:
+## 3. Using `-m #` to search through only a certain number of files:
 
 <span style="color:maroon">Example 1.</span>
 
