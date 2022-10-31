@@ -17,7 +17,7 @@ technical/plos/journal.pbio.0020001.txt:        and development (May 1997). The 
 
 <span style="color:maroon">Example 2: Using `-c` to count the number of times a word shows up within a file or files.</span>
 
-The `-c`  can operate on a single file or a file. In this case, I chose `technical/plos/pmed.0020238.txt` to see how many times the word "the" shows up in the file. The command counts up how many times it does and returns an integer. This is useful for only having to count up how many times a word or phrase shows up in a single file.
+The `-c` can operate on a single file or a file. In this case, I chose `technical/plos/pmed.0020238.txt` to see how many times the word "the" shows up in the file. The command counts up how many times it does and returns an integer. This is useful for only having to count up how many times a word or phrase shows up in a single file.
 
 ```
 audre@AUDREYPC MINGW64 ~/OneDrive/Documents/docsearch (main)
@@ -41,10 +41,10 @@ $ grep -i -m 4 "level"  technical/911report/chapter-9.txt
 
 <span style="color:maroon"> Example 1: Using `-type` to specify what file we're looking for:.</span>
 
-This command determines that the user is looking for a file with the name `chapter*.txt`. This is useful for if there are several files of the same name, but they are different file types. 
+This command determines that the user is looking for a file with the name `chapter*.txt`. This is useful for if there are several files of the same name, but they are different file types.
 
 ```
-$ find -type f -name chapter*.txt 
+$ find -type f -name chapter*.txt
 ./technical/911report/chapter-1.txt
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
@@ -63,10 +63,9 @@ $ find -type f -name chapter*.txt
 ./technical/911report/chapter-9.txt
 ```
 
-
 <span style="color:maroon"> Example 2: Using `-empty` to find which files are empty:.</span>
 
-This command finds all the files that are empty. It is useful if you want to find all files to be removed later. 
+This command finds all the files that are empty. It is useful if you want to find all files to be removed later.
 
 ```
 audre@AUDREYPC MINGW64 ~/OneDrive/Documents/docsearch (main)
@@ -177,10 +176,9 @@ $ find /tmp -type f -empty
 /tmp/wct7B86.tmp
 ```
 
-
 <span style="color:maroon"> Example 3: Using `-size` to find files at a certain size:.</span>
 
-This command finds the files that are a certain size. It is useful for finding files within a certain size range. 
+This command finds the files that are a certain size. It is useful for finding files within a certain size range.
 
 ```
 audre@AUDREYPC MINGW64 ~/OneDrive/Documents/docsearch (main)
@@ -188,12 +186,11 @@ $ find / -size 10M
 /mingw64/bin/git-lfs.exe
 ```
 
-
 ## `Less`: `-N`, `/pattern`, `m` .
 
 <span style="color:maroon"> Example 1: Using `-N` to show the line numbers of a file</span>
 
-Using the `-N` command in less allows the user to check line numbers while they read the file. It is especially useful for if you want to refer back to a line, or if you're telling someone else what line to look at. 
+Using the `-N` command in less allows the user to check line numbers while they read the file. It is especially useful for if you want to refer back to a line, or if you're telling someone else what line to look at.
 
 ```
       1
@@ -206,53 +203,54 @@ Using the `-N` command in less allows the user to check line numbers while they 
       8                 Democrats chosen by elected leaders from our nation's capital at a time of great
       9                 partisan division-have come together to present this report without dissent.
      10             We have come together with a unity of purpose because our nation demands it.
-     11                 September 11, 2001, was a day of unprecedented shock and suffering in the history of     
-     12                 the United States. The nation was unprepared. How did this happen, and how can we        
+     11                 September 11, 2001, was a day of unprecedented shock and suffering in the history of
+     12                 the United States. The nation was unprepared. How did this happen, and how can we
      13                 avoid such tragedy again?
      14             To answer these questions, the Congress and the President created the National
-     15                 Commission on Terrorist Attacks Upon the United States (Public Law 107-306, November     
+     15                 Commission on Terrorist Attacks Upon the United States (Public Law 107-306, November
      16                 27, 2002).
-     17             Our mandate was sweeping. The law directed us to investigate "facts and circumstances        
-     18                 relating to the terrorist attacks of September 11, 2001," including those relating       
-     19                 to intelligence agencies, law enforcement agencies, diplomacy, immigration issues        
+     17             Our mandate was sweeping. The law directed us to investigate "facts and circumstances
+     18                 relating to the terrorist attacks of September 11, 2001," including those relating
+     19                 to intelligence agencies, law enforcement agencies, diplomacy, immigration issues
      20                 and border control, the flow of assets to terrorist organizations, commercial
 Use line numbers  (press RETURN)
 ```
 
 <span style="color:maroon"> Example 2: Using `/(string)` to highlight how many times a word shows up:.</span>
 
-This is a command in less that allows the user to visually see where certain words are in the file. It is useful for skimming through files looking for certain words. 
+This is a command in less that allows the user to visually see where certain words are in the file. It is useful for skimming through files looking for certain words.
 
 This commands wasn't able to be copied properly, so it is in image form below:
 
-[pattern image](https://media.discordapp.net/attachments/1023749314587140137/1036531816355606608/unknown.png)
+![Image](pattern.png)
 
 <span style="color:maroon"> Example 3: Using `m` to mark a line</span>
 
-The m command, followed by a letter, marks a line that you can refer back to. It is useful for quickly going back to a mark for further usage. 
+The m command, followed by a letter, marks a line that you can refer back to. It is useful for quickly going back to a mark for further usage.
 
-```
+````
 set mark: ...skipping...
      23                 reviewed more than 2.5 million pages of documents and interviewed more than 1,200
-     24                 individuals in ten countries. This included nearly every senior official from the        
-     25                 current and previous administrations who had responsibility for topics covered in        
-     26                 our mandate. We have sought to be independent, impartial, thorough, and nonpartisan.     
-     27                 From the outset, we have been committed to share as much of our investigation as we      
+     24                 individuals in ten countries. This included nearly every senior official from the
+     25                 current and previous administrations who had responsibility for topics covered in
+     26                 our mandate. We have sought to be independent, impartial, thorough, and nonpartisan.
+     27                 From the outset, we have been committed to share as much of our investigation as we
      28                 can with the American people. To that end, we held 19 days of hearings and took
      29                 public testimony from 160 witnesses.
      30             Our aim has not been to assign individual blame. Our aim has been to provide the
      31                 fullest possible account of the events surrounding 9/11 and to identify lessons
      32                 learned.
-     33             We learned about an enemy who is sophisticated, patient, disciplined, and lethal. The        
+     33             We learned about an enemy who is sophisticated, patient, disciplined, and lethal. The
      34                 enemy rallies broad support in the Arab and Muslim world by demanding redress of
-     35                 political grievances, but its hostility toward us and our values is limitless. Its       
-     36                 purpose is to rid the world of religious and political pluralism, the plebiscite,        
-     37                 and equal rights for women. It makes no distinction between military and civilian        
+     35                 political grievances, but its hostility toward us and our values is limitless. Its
+     36                 purpose is to rid the world of religious and political pluralism, the plebiscite,
+     37                 and equal rights for women. It makes no distinction between military and civilian
      38                 targets. Collateral damage is not in its lexicon.
-     39             We learned that the institutions charged with protecting our borders, civil aviation,        
-     40                 and national security did not understand how grave this threat could be, and did not     
+     39             We learned that the institutions charged with protecting our borders, civil aviation,
+     40                 and national security did not understand how grave this threat could be, and did not
      41                 adjust their policies, plans, and practices to deter or defeat it. We learned of
      42                 fault lines within our government-between foreign and domestic intelligence, and
      43                 between and within agencies. We learned of the pervasive problems of managing and
      44                 sharing informa
      ```
+````
