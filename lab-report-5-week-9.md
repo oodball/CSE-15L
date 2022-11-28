@@ -95,6 +95,6 @@ fi
 
 ```
 
-These lines check if ListExamples.java is in the repository, and if it isn't, then it will throw error code 1. Since it is not found, then the then statement line does not run, therefore printing out error code 1.
+These lines check if ListExamples.java is in the repository, and if it isn't, then it will throw error code 1. Since it is not found, then the then statement line does not run, therefore printing out error code 1, along with a statement that tells the user to check their file, as their file could have problems with formatting or naming.
 
-The rest of the code does not run, as the code exits early because of exit code 1.
+Everything past this line of code does not run, as the code exits early because of exit code 1.
