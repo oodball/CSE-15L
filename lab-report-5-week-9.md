@@ -1,4 +1,5 @@
 # Lab Report 5
+
 ## Autograder
 
 ```
@@ -16,14 +17,14 @@ else
     echo "file not found, check formatting or naming"
     exit 1
 fi
-cd .. 
+cd ..
 set +e
 javac -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" *.java 2> stderr.txt
 
 if [[ $? -ne 0 ]]
 then
     echo "compiler error"
-    cat stderr.txt 
+    cat stderr.txt
     exit 1
 else
     echo "successfully compiled"
@@ -44,4 +45,56 @@ fi
 cat output.txt
 ```
 
+## Screenshots
 
+1. Correct Repository
+
+![correct](https://cdn.discordapp.com/attachments/1023749314587140137/1046733563783020574/image.png)
+
+2. pa1 Repository (#6)
+   ![compiler err](https://cdn.discordapp.com/attachments/1023749314587140137/1046748953842036776/image.png)
+
+3. FileName Error Repository (#6)
+
+![filename](https://cdn.discordapp.com/attachments/1023749314587140137/1046749195786264636/image.png)
+
+## Tracing Tests: FileName Error repository
+
+```
+set -e
+rm -rf student-submission
+git clone $1 student-submission
+cd student-submission
+```
+
+`set -e` allows for the code to immediately exit, while the next three lines, respectively:
+
+1. `rm -rf student-submission`
+
+This allows for a recursive removal of all files that were run using this code last.
+
+2. `git clone $1 student submission`
+
+This clones the GitHub repository that the user chose, which in this case is `https://github.com/ucsd-cse15l-f22/list-methods-corrected`
+
+3. `cd student-submission`
+
+This changes the directory into the `student-submission` folder inside the repository
+
+Since all lines are successful, there is no standard output or error, so it would return error code 0.
+
+```
+set -e
+if [[ -e ListExamples.java ]]
+then
+    echo "file found"
+else
+    echo "file not found, check formatting or naming"
+    exit 1
+fi
+
+```
+
+These lines check if ListExamples.java is in the repository, and if it isn't, then it will throw error code 1. Since it is not found, then the then statement line does not run, therefore printing out error code 1.
+
+The rest of the code does not run, as the code exits early because of exit code 1.
