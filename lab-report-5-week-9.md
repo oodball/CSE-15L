@@ -17,7 +17,7 @@ else
     echo "file not found, check formatting or naming"
     exit 1
 fi
-#cd ..
+# cd ..
 set +e
 javac -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" *.java 2> stderr.txt
 
