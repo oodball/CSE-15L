@@ -17,7 +17,7 @@ else
     echo "file not found, check formatting or naming"
     exit 1
 fi
-cd ..
+#cd ..
 set +e
 javac -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" *.java 2> stderr.txt
 
@@ -47,12 +47,12 @@ cat output.txt
 
 ## Screenshots
 
-1. Correct Repository
+1. Correct Repository (#2)
 
 ![correct](https://cdn.discordapp.com/attachments/1023749314587140137/1046733563783020574/image.png)
 
-2. pa1 Repository (#6)
-   ![compiler err](https://cdn.discordapp.com/attachments/1023749314587140137/1046748953842036776/image.png)
+2. Compiler Error Repository (#3)
+   ![compiler err](https://cdn.discordapp.com/attachments/1023749314587140137/1046755469517131827/image.png)
 
 3. FileName Error Repository (#6)
 
