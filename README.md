@@ -13,10 +13,15 @@
  vim i
  
  if[$? -ne 00]
+ 
  then
+ 
   echo "failed to compile, 0/4"
+  
   exit 1
+  
  fi
+ 
  ESC, :wq!
  
  
